@@ -1,0 +1,126 @@
+//Questão 1
+
+Console.WriteLine("informe a dimensão da base: ");
+float baseretangulo = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("informe a dimensão da altura: ");
+float alturaretangulo = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine($"a área do terreno de base {baseretangulo} e altura {alturaretangulo} é: {baseretangulo * alturaretangulo}");
+
+//Questão 2
+
+Console.WriteLine("informe a quantidade de cavalos: ");
+int cavalos = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"a quantidade de ferraduras necessárias é: {cavalos * 4}");
+
+//Questão 3
+
+Console.WriteLine("Informe seu nome: ");
+string nome = Console.ReadLine();
+
+Console.WriteLine("Informe sua idade: ");
+int idade = Convert.ToInt32(Console.ReadLine());
+
+int dias = idade * 365;
+
+Console.WriteLine($"{nome}, sua idade: {idade} equivale a: {dias} dias");
+
+//Questão 4
+
+float valorGasolina = Convert.ToSingle(5.85f);
+Console.WriteLine($"Preço da gasolina: {valorGasolina}");
+
+Console.WriteLine("Informe quantos reais deseja de gasolina: ");
+float valorPagamento = Convert.ToSingle(Console.ReadLine());
+
+float totalLitros = valorPagamento / valorGasolina;
+
+Console.WriteLine($"A quantidade de litros adquiridos com esse valor é: {totalLitros:F2}l");
+
+//Questão 5
+
+int camisetaP = Convert.ToInt32(10);
+Console.WriteLine($"Camiseta Pequena: R${camisetaP}");
+
+int camisetaM = Convert.ToInt32(12);
+Console.WriteLine($"Camiseta Média: R${camisetaM}");
+
+int camisetaG = Convert.ToInt32(15);
+Console.WriteLine($"Camiseta Grande: R${camisetaG}");
+
+Console.WriteLine("Informe a quantidade de camisas tamanho P: ");
+int quantidadeP = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Informe a quantidade de camisas tamanho M: ");
+int quantidadeM = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Informe a quantidade de camisas tamanho G: ");
+int quantidadeG = Convert.ToInt32(Console.ReadLine());
+
+int valorTotal = (quantidadeP * camisetaP) + (quantidadeM * camisetaM) + (quantidadeG * camisetaG);
+
+Console.WriteLine($"O valor total será: R${valorTotal}");
+
+//Questão 6
+
+Console.WriteLine("Informe seu salário: ");
+double salario = Convert.ToDouble(Console.ReadLine());
+
+double salarioAumentado = salario * 1.15f;
+
+double salarioFinal = salarioAumentado * 0.92f;
+
+Console.WriteLine($"Sálario inicial: R${salario}; sálario Após aumento: R${salarioAumentado:F2}; Salário final: R${salarioFinal:F2}");
+
+//Questão 7
+
+Console.WriteLine("Informe o raio da caixa d'água: ");
+float raio = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("Agora informe a altura da caixa d'água: ");
+float altura = Convert.ToSingle(Console.ReadLine());
+
+float volume = 3.14f * (raio * raio) * altura;
+
+Console.WriteLine($"O volume da caixa d'água é: {volume:F1}");
+
+//Questão 9
+
+Console.WriteLine("Informe uma medida em metros: ");
+float m = Convert.ToSingle(Console.ReadLine());
+
+float cm = m * 100;
+
+float mm = m * 1000;
+
+float Km = m / 1000;
+
+Console.WriteLine($"A medida: {m}m convertido respectivamente em cm, mm e Km é: \n {cm}cm \n {mm}mm \n {Km}Km");
+
+////Questão 10
+
+int lata = Convert.ToInt32(350);
+Console.WriteLine($"Lata: {lata}ml");
+
+int garrafinha = Convert.ToInt32(600);
+Console.WriteLine($"Garrafinha: {garrafinha}ml");
+
+int garrafa = Convert.ToInt32(2);
+Console.WriteLine($"Garrafa: {garrafa}l");
+
+Console.WriteLine("Informe a quantidade de latas de 350ml que deseja: ");
+int qtdLata = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Informe a quantidade de garrafas de 600ml que deseja: ");
+int qtdGarrafinha = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Informe a quantidade de garrafas de 2 litros que deseja: ");
+int qtdGarrafa = Convert.ToInt32(Console.ReadLine());
+
+int garrafa2l = garrafa * 1000;
+
+float litrosTotais = (lata * qtdLata + garrafinha * qtdGarrafinha + garrafa2l * qtdGarrafa) / 1000f;
+
+Console.WriteLine($"O valor total será: {litrosTotais}l");
