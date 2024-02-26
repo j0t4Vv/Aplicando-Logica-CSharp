@@ -1,0 +1,176 @@
+//Questão 1
+
+double soma = 0;
+
+for (double i = 0; i < 10; i++)
+{
+    Console.WriteLine($"Informe o {i + 1}° número: ");
+    double n = Convert.ToDouble(Console.ReadLine());
+
+    soma += n;
+}
+
+Console.WriteLine($"A soma entre todos os números informados é: {soma}");
+
+//Questão 2
+
+Console.WriteLine("Informe seu nome: ");
+string nome = Console.ReadLine();
+
+Console.WriteLine("Informe a primeira nota: ");
+float nota1 = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("Informe a segunda nota: ");
+float nota2 = Convert.ToSingle(Console.ReadLine());
+
+float media = (nota1 + nota2) / 2;
+
+if (media >= 6)
+{
+    Console.WriteLine($"Nome: {nome}\n Média: {media}\n Situação: Aprovado");
+}
+else
+{
+    Console.WriteLine($"Nome: {nome}\n Média: {media}\n Situação: Reprovado");
+}
+
+//Questão 3
+
+Console.WriteLine("Informe seu salário: ");
+float salario = Convert.ToSingle(Console.ReadLine());
+
+if (salario < 1500)
+{
+    Console.WriteLine(salario * 1.5);
+}
+else if (salario >= 1500 && salario < 4300)
+{
+    Console.WriteLine(salario * 1.4);
+}
+else
+{
+    Console.WriteLine(salario * 1.3);
+}
+
+//Questão 4
+
+Console.WriteLine("Informe a idade do nadador: ");
+int idade = Convert.ToInt32(Console.ReadLine());
+
+if (idade >= 5 && idade <= 7)
+{
+    Console.WriteLine("Categoria: Infantil A");
+}
+
+else if (idade >= 8 && idade <= 10)
+{
+    Console.WriteLine("Categoria: Infantil B");
+}
+
+else if (idade >= 11 && idade <= 13)
+{
+    Console.WriteLine("Categoria: Juvenil A");
+}
+
+else if (idade >= 14 && idade <= 17)
+{
+    Console.WriteLine("Categoria: Juvenil B");
+}
+
+else if (idade >= 18)
+{
+    Console.WriteLine("Categoria: Adulto");
+}
+
+else
+{
+    Console.WriteLine("Categoria inexistente");
+}
+
+//Questão 5
+
+int lata = Convert.ToInt32(350);
+Console.WriteLine($"Lata: {lata}ml");
+
+int garrafinha = Convert.ToInt32(600);
+Console.WriteLine($"Garrafinha: {garrafinha}ml");
+
+int garrafa = Convert.ToInt32(2);
+Console.WriteLine($"Garrafa: {garrafa}l");
+
+Console.WriteLine("Informe a quantidade de latas de 350ml que deseja: ");
+int qtdLata = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Informe a quantidade de garrafas de 600ml que deseja: ");
+int qtdGarrafinha = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Informe a quantidade de garrafas de 2 litros que deseja: ");
+int qtdGarrafa = Convert.ToInt32(Console.ReadLine());
+
+int garrafa2l = garrafa * 1000;
+
+float litrosTotais = (lata * qtdLata + garrafinha * qtdGarrafinha + garrafa2l * qtdGarrafa) / 1000f;
+
+Console.WriteLine($"O valor total será: {litrosTotais}l");
+
+//Questão 6
+
+Console.WriteLine("Informe a primeira nota: ");
+float nota_1 = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("Informe a segunda nota: ");
+float nota_2 = Convert.ToSingle(Console.ReadLine());
+
+float media_notas = (nota_1 + nota_2) / 2;
+
+if (media_notas >= 7)
+{
+    Console.WriteLine("Aprovado");
+    Console.WriteLine("Recebe Certificado");
+}
+else
+{
+    Console.WriteLine("Reprovado");
+    Console.WriteLine("Não recebe");
+}
+
+//Questão 7
+
+Console.WriteLine("Informe o valor de a: ");
+double a = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Informe o valor de b: ");
+double b = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Informe o valor de c: ");
+double c = Convert.ToDouble(Console.ReadLine());
+
+double delta = b * b - 4 * a * c;
+
+if (delta > 0)
+{
+    double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+    double x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+    Console.WriteLine($"Resultado do x1 = {x1} e x2 = {x2}");
+}
+else if (delta == 0)
+{
+    double x = -b / (2 * a);
+    Console.WriteLine($"A equação possui uma raiz dupla: x = {x}");
+}
+else
+{
+    Console.WriteLine("Não é possível obter um resultado real");
+}
+
+//Questão 8
+
+Console.WriteLine("Informe seu peso, em Kg: ");
+float peso = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("Informe sua altura, em metros: ");
+float altura = Convert.ToSingle(Console.ReadLine());
+
+float imc = peso / (altura * altura);
+
+Console.WriteLine($"Seu IMC é: {imc:F2}");
